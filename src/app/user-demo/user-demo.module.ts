@@ -11,7 +11,6 @@ import { UserService } from "../services/user-service.service";
   ],
   providers: [
     UserService
-  ],
-  declarations: []
+  ]
 })
 export class UserDemoModule { }

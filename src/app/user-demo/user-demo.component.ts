@@ -1,4 +1,4 @@
-import { Component, ReflectiveInjector } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from "../services/user-service.service";
 
 @Component({
@@ -8,12 +8,9 @@ import { UserService } from "../services/user-service.service";
 })
 export class UserDemoComponent {
   userName: string;
-  userService: UserService;
 
-  constructor() { 
-    const injector: any = ReflectiveInjector.resolveAndCreate([UserService]);
+  constructor(private userService: UserService) { 
     
-    this.userService = injector.get(UserService);
   }
   
   signIn():void {
